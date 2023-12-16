@@ -18,6 +18,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        # Add the following steps to create the .env file
+      - name: Create .env file
+        run: |
+          touch .env
+          echo "PORT=${{ secrets.PORT }}" >> .env
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
