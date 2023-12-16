@@ -9,8 +9,6 @@ on:
 
 jobs:
   build:
-    env:
-      PORT: "7070"
     runs-on: self-hosted
 
     strategy:
